@@ -25,7 +25,7 @@ describe('Todos', () => {
     const response = await request(app)
       .get('/todos')
       .set('username', userResponse.body.username);
-
+      
     expect(response.body).toEqual(
       expect.arrayContaining([
         todoResponse.body
